@@ -114,9 +114,12 @@ export default class User extends Component {
                                 {this.state.PasswordChange ? "Cancel " : 'Change Passowrd'}
                             </Button>
 
-                            <Button className="" style={{ backgroundColor: "red" }} variant="danger" type="submit" onClick={this.logoutMethod}  >
-                                Logout
-                                        </Button>
+
+                            {this.state.PasswordChange ? <Button variant="success" type="submit" style={{ backgroundColor: "green", marginLeft: "100px" }} > Submit </Button> :
+                                <Button className="" style={{ backgroundColor: "red", marginLeft: "100px" }} variant="danger" type="submit" onClick={this.logoutMethod}  >
+                                    Logout
+                              </Button>
+                            }
                         </Box>
 
 
@@ -139,7 +142,7 @@ export default class User extends Component {
                                 </Grid>
                             </Box>
 
-                            <Button variant="success" type="submit" > Submit </Button>
+                            <Button variant="success" type="submit" style={{ backgroundColor: "green", marginLeft: "100px" }}  > Submit </Button>
 
                         </Box>
                     }
